@@ -1,15 +1,14 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  TourClone
 //
-//  Created by 东东 on 2017/6/23.
+//  Created by 东东 on 2017/6/24.
 //  Copyright © 2017年 linxingdong. All rights reserved.
 //
 
 import UIKit
-import SnapKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     lazy var mainTableView: UITableView = {
         let table = UITableView.init(frame: CGRect.zero, style: .grouped);
         table.delegate = self;
@@ -25,15 +24,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             make.edges.equalTo(view).inset(UIEdgeInsetsMake(0, 0, 0, 0));
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
-extension ViewController{
+extension HomeViewController{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 100;
     }
@@ -50,7 +49,7 @@ extension ViewController{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let seVC = SecondViewController();
-        self.present(seVC, animated: true) { 
+        self.present(seVC, animated: true) {
             
         }
     }
